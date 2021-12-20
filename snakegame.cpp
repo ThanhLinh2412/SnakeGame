@@ -232,23 +232,23 @@ void showStartMenu()
 {
 	system("cls");
 	cout << "Welcome to snake game!" << endl;
-	cout << "Sự lựa chọn:" << endl;
-	cout << "1. Bắt đầu" << endl;
-	cout << "2. Kết thúc" << endl;
-	cout << "Bạn lựa chọn: ";
+	cout << "Su lua chon:" << endl;
+	cout << "1. Bat dau" << endl;
+	cout << "2. Ket thuc" << endl;
+	cout << "Ban lua chon: ";
 	int option;
 	cin >> option;
 	if (option == 1)
 	{
 		system("cls");
-		cout << "Chọn level (1 - 5): ";
+		cout << "Chon level (1 - 5): ";
 		int t;
 		cin >> t;
 		speed = 600 - t * 100; // Calculate speed depend on level
 		system("cls");
-		cout << "Tip: Trong khi đang chơi, bạn có thể bấm 'q' để thoát.";
+		cout << "Tip: Trong khi chon, ban co the bam phim 'q' de thoat.";
 		gotoxy(0, 3);
-		cout << "Sẵn sàng!";
+		cout << "San sang!";
 		Sleep(1000);
 		for (size_t i = 3; i > 0; i--)
 		{
@@ -257,7 +257,7 @@ void showStartMenu()
 			Sleep(1000);
 		}
 		gotoxy(0, 3);
-		cout << "BẮT ĐẦU!";
+		cout << "BAT DAU!";
 		Sleep(1000);
 		startGame();
 	}
