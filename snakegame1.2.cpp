@@ -1,19 +1,19 @@
 #pragma region SnakeFunction
-// v? 1 ph?n c?a r?n
+// vẽ 1 phần của rắn
 void drawSnakePart(Point p)
 {
 	gotoxy(p.x, p.y);
 	cout << BODY;
 }
 
-// v? to�n b? r?n
+// vẽ toàn bộ rắn
 void drawSnake()
 {
 	for (size_t i = 0; i < snake.size(); i++)
 		drawSnakePart(snake[i]);
 }
 
-// di chuy?n r?n
+// di chuyển rắn
 void move()
 {
 	prevTail = snake.back();
@@ -29,16 +29,16 @@ void move()
 		snake[0].x += 1;
 }
 
-// v? l?i ??u v� ?u�i r?n ?? l�m n� di chuy?n
+// vẽ lại đầu và đuôi rắn để làm nó di chuyển
 void drawHeadnTail()
 {
 	gotoxy(snake[0].x, snake[0].y);
 	cout << BODY;
 	gotoxy(prevTail.x, prevTail.y);
-	cout << ' '; // x�a ?u�i c?
+	cout << ' '; // xóa đuôi cũ
 }
 
-// Check if r?n ?n ch�nh n�
+// Check if rắn ăn chính nó
 bool isBiteItself()
 {
 	Point head = snake[0];
@@ -48,7 +48,7 @@ bool isBiteItself()
 	return false;
 }
 
-// T?ng ?? d�i khi ?n qu?
+// Tăng độ dài khi ăn quả
 void growing()
 {
 	snake.push_back(prevTail);
@@ -57,7 +57,7 @@ void growing()
 
 
 #pragma region ConsoleFunction
-// ??n ??a ?i?m c� t?a ?? x, y
+// đến địa điểm có tọa độ x, y
 void gotoxy(int x, int y)
 {
 	COORD coord;
@@ -69,7 +69,7 @@ void gotoxy(int x, int y)
 	);
 }
 
-// ??t kh? n?ng hi?n th? c?a con tr?
+// đặt khả năng hiển thị của con trỏ
 void ShowConsoleCursor(bool showFlag)
 {
 	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
