@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
- * Import library
+ * Thêm thư viện
  */
 #include <vector>
 #include <windows.h>
@@ -30,7 +30,7 @@ enum class Direction
 	left
 };
 
-// Each point is a part of the snake
+// Điểm 
 struct Point
 {
 	int x;
@@ -39,7 +39,7 @@ struct Point
 
 
 #pragma region GlobalVariable
-// Create snake
+// Tạo con rắn
 vector<Point> snake = {
 	Point{ WIDTH / 2 + 2, HEIGHT / 2 },
 	Point{ WIDTH / 2 + 1, HEIGHT / 2 },
